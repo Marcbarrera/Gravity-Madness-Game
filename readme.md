@@ -6,7 +6,7 @@ Newton needs to be hit by the apple's falling off the tree. He also has to avoid
 
 ## MVP (DOM - CANVAS)
 MVP definition, deliverables.
-
+A demo of the game.
 
 ## Backlog
 - Add illustrations.
@@ -15,7 +15,24 @@ MVP definition, deliverables.
 
 
 ## Data structure
-Classes and methods definition.
+Classes:
+    - Apple
+    - Cross
+    - Newton
+    - Game 
+
+Methods:
+    - move ()
+    - draw ()
+    - deleteApple ()
+    - deleteCross () 
+    - moves ()
+    - updateLives ()
+    - cheackcollisions ()
+    - clearRect
+    - update ()
+    - clear ()
+    
 
 
 ## States y States Transitions
