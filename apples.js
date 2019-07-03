@@ -8,8 +8,8 @@ function Enemy(canvas, randomX) {
   this.velocity = 5;
   this.direction = 1;
   this.color = 'green';
-  this.width = 20;
-  this.height = 20;
+  this.width = 90;
+  this.height = 90;
 }
 
 Enemy.prototype.move = function() {
@@ -17,6 +17,7 @@ Enemy.prototype.move = function() {
 }
 
 Enemy.prototype.draw = function() {
-  this.ctx.fillStyle = this.color;
-  this.ctx.fillRect(this.x, this.y, this.width, this.height);
+    var cruz = new Image();
+    cruz.src = 'cross.png';
+  this.ctx.drawImage(cruz, this.x, this.y, this.width, this.height);
 }

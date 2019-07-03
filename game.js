@@ -16,13 +16,13 @@ Game.prototype.startGame = function () {
 
     this.player = new Player(this.canvas);
     var loop = () => {
-        if(Math.random() > 0.99) {
+        if(Math.random() > 0.85) {
             var randomX = Math.random() * this.canvas.width - 10;
             var newEnemy = new Enemy(this.canvas, randomX);
 
             this.enemies.push(newEnemy);
           }
-          if(Math.random() > 0.85) {
+          if(Math.random() > 0.99) {
             var randomX = Math.random() * this.canvas.width - 10;
             var newCross = new Cross(this.canvas, randomX);
 

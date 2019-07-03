@@ -14,7 +14,7 @@ function main (){
         var wellcomeScreen = buildDom(`
         <section>
             <h1>Gravity Madness</h1>
-            <button>START BITCH</button>
+            <button>START</button>
         </section>
         `);
 
@@ -36,6 +36,7 @@ function main (){
         canvasElement.width = container.offsetWidth;
         canvasElement.height = container.offsetHeight;
         canvasElement.margin = container.offsetMargin;
+
 
         var gameInstance = new Game (canvasElement);
 
@@ -60,7 +61,7 @@ function main (){
     function createGameOverScreen (){
         var gameOverScreen = buildDom(`
         <section>
-        <h1>GAME OVER BITCH</h1>
+        <h1>GAME OVER</h1>
         <button>Restart</button>
         </section>
         `);
