@@ -29,21 +29,36 @@ function main (){
             <canvas></canvas> 
         </section>
         `);
-        var canvasElement = document.querySelector('canvas');
+
         var container = document.querySelector('#canvas-container');
+        var canvasElement = document.querySelector('canvas');
 
         canvasElement.width = container.offsetWidth;
         canvasElement.height = container.offsetHeight;
         canvasElement.margin = container.offsetMargin;
 
-        setTimeout(createGameOVerScreen, 3000);
+        var gameInstance = new Game (canvasElement);
+
+        gameInstance.startGame(); 
+        document.addEventListener('keydown', function(event) {
+            if(event.key === 'ArrowLeft') {
+              gameInstance.player.setDirection(-1);
+            } else if(event.key === 'ArrowRight') {
+              gameInstance.player.setDirection(+1);
+            }
+          });
+        gameInstance.gameOverCallback(createGameOverScreen);
+
+
+
+        //setTimeout(createGameOVerScreen, 2000);
 
 
     };
 
 
-    function createGameOVerScreen (){
-        var createGameOVerScreen = buildDom(`
+    function createGameOverScreen (){
+        var gameOverScreen = buildDom(`
         <section>
         <h1>GAME OVER BITCH</h1>
         <button>Restart</button>

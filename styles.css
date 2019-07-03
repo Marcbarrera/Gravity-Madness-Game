@@ -7,9 +7,13 @@ body {
     margin: 0;
     overflow: hidden;
 }
+#site-main {
+
+}
 
 #canvas-container {
-    background-color: red;
+  
+    background-color: white;
     border: 1px solid black;
     width: 150vh;
     height: 100vh;
