@@ -70,6 +70,21 @@ function main (){
     };
     createWelcomeScreen();
 
+
+    function createYouWinScreen (){
+        var gameOverScreen = buildDom(`
+        <section>
+        <h1>GAME OVER BITCH</h1>
+        <button>Restart</button>
+        </section>
+        `);
+
+        var restartButton = document.querySelector('button');
+        restartButton.addEventListener ('click',createGameScreen);
+    };
+    createWelcomeScreen();
+
+
 };
 
 window.addEventListener('load', main);

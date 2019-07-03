@@ -10,20 +10,19 @@ function Game (canvas){
     this.canvas = canvas;
     this.ctx = this.canvas.getContext('2d');
     this.onGameOver = null;
-    
 }
 
 Game.prototype.startGame = function () {
 
     this.player = new Player(this.canvas);
     var loop = () => {
-        if(Math.random() > 0.97) {
+        if(Math.random() > 0.99) {
             var randomX = Math.random() * this.canvas.width - 10;
             var newEnemy = new Enemy(this.canvas, randomX);
 
             this.enemies.push(newEnemy);
           }
-          if(Math.random() > 0.97) {
+          if(Math.random() > 0.85) {
             var randomX = Math.random() * this.canvas.width - 10;
             var newCross = new Cross(this.canvas, randomX);
 
@@ -35,7 +34,10 @@ Game.prototype.startGame = function () {
           this.checkCollisions()
           if(!this.isGameOver) {
             requestAnimationFrame(loop)
-          } else {
+          } 
+          
+        
+          else {
             this.onGameOver();
           }
         };
@@ -67,6 +69,9 @@ Game.prototype.draw = function() {
 
 
 Game.prototype.checkCollisions = function() {
+    console.log("apples: " +this.player.caughtApples);
+    console.log("lives: "+this.player.lives);
+    
     this.enemies.forEach((enemy, index) => {
       var rightLeft = this.player.x + this.player.width >= enemy.x;
       var leftRight = this.player.x <= enemy.x + enemy.width;
@@ -81,6 +86,22 @@ Game.prototype.checkCollisions = function() {
         }
       }
     })
+    this.crosses.forEach((cross, index) => {
+        var rightLeft1 = this.player.x + this.player.width >= cross.x;
+        var leftRight1 = this.player.x <= cross.x + cross.width;
+        var bottomTop1 = this.player.y + this.player.height >= cross.y;
+        var topBottom1 = this.player.y <= cross.y + cross.height;
+    
+        if (rightLeft1 && leftRight1 && bottomTop1 && topBottom1) {
+          this.crosses.splice(index, 1);
+          this.player.caughtApples ++;
+        if(this.player.caughtApples === 5) {
+             this.isYouWin = true;
+      }
+        }
+      })
+
+    
   }
 
   Game.prototype.gameOverCallback = function(callback) {

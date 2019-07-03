@@ -7,7 +7,7 @@ function Enemy(canvas, randomX) {
   this.y = 0;
   this.velocity = 5;
   this.direction = 1;
-  this.color = 'red';
+  this.color = 'green';
   this.width = 20;
   this.height = 20;
 }

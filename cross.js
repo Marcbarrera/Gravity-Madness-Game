@@ -7,7 +7,7 @@ function Cross(canvas, randomX) {
   this.y = 0;
   this.velocity = 10;
   this.direction = 1;
-  this.color = 'green';
+  this.color = 'red';
   this.width = 20;
   this.height = 20;
 }
