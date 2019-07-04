@@ -26,12 +26,29 @@ function main (){
     function createGameScreen(){
         var GameScreen = buildDom(`
         <section id="canvas-container">
+            <article class="legend">
+                <div class="numApples">
+                <p></p>
+                </div>
+                <div class="numLives">
+                <div>
+                <img src="./apple.svg">
+                </div>
+                <p></p>
+                </div>
+            </article>
             <canvas></canvas> 
+            <article class="floor"></article>
         </section>
         `);
 
         var container = document.querySelector('#canvas-container');
+        var legendElement = document.querySelector('.legend');
         var canvasElement = document.querySelector('canvas');
+        
+
+        legendElement.width = container.offsetWidth;
+        legendElement.height = container.offsetHeight;
 
         canvasElement.width = container.offsetWidth;
         canvasElement.height = container.offsetHeight;
@@ -86,18 +103,8 @@ function main (){
     createWelcomeScreen();
 
 
-    function createYouWinScreen (){
-        var gameOverScreen = buildDom(`
-        <section>
-        <h1>GAME OVER BITCH</h1>
-        <button>Restart</button>
-        </section>
-        `);
-
-        var restartButton = document.querySelector('button');
-        restartButton.addEventListener ('click',createGameScreen);
-    };
-    createWelcomeScreen();
+  
+    
 
 
 };

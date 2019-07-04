@@ -52,6 +52,12 @@ Game.prototype.update = function() {
     this.crosses.forEach(function(cross) {
         cross.move();
       })
+
+      var numeroApples = document.querySelector('.numApples p');
+      numeroApples.innerHTML="apples = "+this.player.caughtApples;
+
+      var numeroDeVidas = document.querySelector('.numLives p');
+      numeroDeVidas.innerHTML="lives = "+this.player.lives;
   }
 
 Game.prototype.clear = function() {
@@ -60,6 +66,7 @@ Game.prototype.clear = function() {
 
 Game.prototype.draw = function() {
     this.player.draw();
+    
     this.enemies.forEach(function(enemy) {
       enemy.draw();
     })
@@ -94,7 +101,7 @@ Game.prototype.checkCollisions = function() {
         if (rightLeft1 && leftRight1 && bottomTop1 && topBottom1) {
           this.crosses.splice(index, 1);
           this.player.caughtApples ++;
-        if(this.player.caughtApples === 5) {
+        if(this.player.caughtApples ===10) {
              this.isGameOver = true;
       }
         }
