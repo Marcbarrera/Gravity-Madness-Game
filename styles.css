@@ -20,8 +20,8 @@ body {
     display:flex;
     align-items: center;
     flex-direction: row;
-    /* background-color:rgb(78,154,6); */
-    background-color: blue;
+    background-color:rgb(78,154,6);
+    /* background-color: blue; */
     width: 100%;
     height: 10vh;
     color:orange;
@@ -29,22 +29,33 @@ body {
 
 }
 
+
 .numApples{
     flex: 1;
     display: flex;
     flex-direction: row;
     justify-content: center; 
+    align-items: center;
+
 }
+
+
+.numApples-img img{
+    width: 60px;
+}
+.numApples p{
+    margin-left: 20px;
+    font-size: 40px;
+       
+}
+
 
 .numLives{
     flex:1;
     display: flex;
     flex-direction: row;
     justify-content: center; }
-.numApples p{
-    font-size: 40px;
-       
-}
+
 .numLives p{
     font-size: 40px;    
 }

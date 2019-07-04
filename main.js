@@ -28,13 +28,14 @@ function main (){
         <section id="canvas-container">
             <article class="legend">
                 <div class="numApples">
-                <p></p>
+                    <div class="numApples-img">
+                        <img src="./apple.svg">
+                    </div>
+                    <p>
+                    </p>
                 </div>
                 <div class="numLives">
-                <div>
-                <img src="./apple.svg">
-                </div>
-                <p></p>
+                    <p></p>
                 </div>
             </article>
             <canvas></canvas> 

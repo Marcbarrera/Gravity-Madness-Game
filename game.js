@@ -54,7 +54,7 @@ Game.prototype.update = function() {
       })
 
       var numeroApples = document.querySelector('.numApples p');
-      numeroApples.innerHTML="apples = "+this.player.caughtApples;
+      numeroApples.innerHTML=+this.player.caughtApples;
 
       var numeroDeVidas = document.querySelector('.numLives p');
       numeroDeVidas.innerHTML="lives = "+this.player.lives;
