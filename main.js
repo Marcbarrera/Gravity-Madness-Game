@@ -12,8 +12,10 @@ function main (){
 
     function createWelcomeScreen (){
         var wellcomeScreen = buildDom(`
-        <section>
-            <h1>Gravity Madness</h1>
+        <section id="intro-page">
+            <h2>Welcome to...</h2>
+            <h1><span class="title-first">GRAVITY</span> MADNESS</h1>
+            <p>get 10 apples to discover gravity's formula</p>
             <button>START</button>
         </section>
         `);
@@ -79,7 +81,7 @@ function main (){
     function createGameOverScreen (){
         if (this.player.lives===0){
         var gameOverScreen = buildDom(`
-        <section>
+        <section id="gameOverPage">
         <h1>GAME OVER</h1>
         <button>Play Again</button>
         </section>

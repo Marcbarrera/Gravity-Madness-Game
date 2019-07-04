@@ -1,4 +1,5 @@
 * {
+    margin:0;
     box-sizing: border-box;
 }
 
@@ -6,13 +7,58 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
+    background-image: url('./intro.gif');
+    background-size:cover;
+  
+
 }
 #site-main {
 
 }
 
+#intro-page {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width:400px;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    
+}
 
 
+
+
+#intro-page h2 {
+    color:white;
+    font-size: 20px;
+    margin-bottom: 60px;
+    margin-top: 20px;
+
+
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+
+#intro-page h1 {
+    color:white;
+    font-size: 80px;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+.title-first{
+    color:red;
+    margin-left:50px;
+}
+
+#intro-page button{
+
+    text-decoration: none;
+}
 
 #canvas-container .legend{
 
@@ -28,7 +74,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
 }
-
+#gameOverPage{
+    background-color:green;
+}
 
 .numApples{
     flex: 1;
