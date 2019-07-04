@@ -59,15 +59,29 @@ function main (){
 
 
     function createGameOverScreen (){
+        if (this.player.lives===0){
         var gameOverScreen = buildDom(`
         <section>
         <h1>GAME OVER</h1>
-        <button>Restart</button>
+        <button>Play Again</button>
         </section>
         `);
 
         var restartButton = document.querySelector('button');
         restartButton.addEventListener ('click',createGameScreen);
+        }
+        else {
+            var gameOverWinScreen = buildDom(`
+            <section>
+            <h1>YOU WIN</h1>
+            <button>Play Again</button>
+            </section>
+            `);
+    
+            var restartButton = document.querySelector('button');
+            restartButton.addEventListener ('click',createGameScreen);
+            }
+        
     };
     createWelcomeScreen();
 

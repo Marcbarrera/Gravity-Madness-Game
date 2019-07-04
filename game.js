@@ -16,13 +16,13 @@ Game.prototype.startGame = function () {
 
     this.player = new Player(this.canvas);
     var loop = () => {
-        if(Math.random() > 0.85) {
+        if(Math.random() > 0.98) {
             var randomX = Math.random() * this.canvas.width - 10;
             var newEnemy = new Enemy(this.canvas, randomX);
 
             this.enemies.push(newEnemy);
           }
-          if(Math.random() > 0.99) {
+          if(Math.random() > 0.98) {
             var randomX = Math.random() * this.canvas.width - 10;
             var newCross = new Cross(this.canvas, randomX);
 
@@ -31,7 +31,8 @@ Game.prototype.startGame = function () {
           this.update();
           this.clear();
           this.draw();
-          this.checkCollisions()
+          this.checkEnemisInScreen();
+          this.checkCollisions();
           if(!this.isGameOver) {
             requestAnimationFrame(loop)
           } 
@@ -69,8 +70,6 @@ Game.prototype.draw = function() {
 
 
 Game.prototype.checkCollisions = function() {
-    console.log("apples: " +this.player.caughtApples);
-    console.log("lives: "+this.player.lives);
     
     this.enemies.forEach((enemy, index) => {
       var rightLeft = this.player.x + this.player.width >= enemy.x;
@@ -96,7 +95,7 @@ Game.prototype.checkCollisions = function() {
           this.crosses.splice(index, 1);
           this.player.caughtApples ++;
         if(this.player.caughtApples === 5) {
-             this.isYouWin = true;
+             this.isGameOver = true;
       }
         }
       })
@@ -107,3 +106,18 @@ Game.prototype.checkCollisions = function() {
   Game.prototype.gameOverCallback = function(callback) {
     this.onGameOver = callback;
   }
+
+  Game.prototype.checkEnemisInScreen = function() {
+
+      this.enemies.forEach((enemy, index) => {
+        if (enemy.y > this.canvas.height) {
+            this.enemies.splice(index, 1);
+        }
+      })
+
+    this.crosses.forEach((cross, index) => {
+        if (cross.y > this.canvas.height) {
+            this.crosses.splice(index, 1);
+        }
+    })
+}

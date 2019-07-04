@@ -23,6 +23,6 @@ Cross.prototype.draw = function() {
 //   this.ctx.fillStyle = this.image.src;
 
     var cat = new Image();
-    cat.src = 'cat.png';
+    cat.src = 'apple.svg';
   this.ctx.drawImage(cat, this.x, this.y, this.width, this.height);
 }
