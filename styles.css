@@ -46,6 +46,8 @@ body {
     font-size: 80px;
     font-family: 'Press Start 2P', cursive;
     line-height: 95px;
+    text-shadow: 4px;
+    text-shadow: 4px 0px grey;
 
 }
 #outro-page {
@@ -77,6 +79,7 @@ body {
     font-size: 80px;
     font-family: 'Press Start 2P', cursive;
     opacity: 0.9;
+    text-shadow: 4px 0px grey;
 
 }
 
