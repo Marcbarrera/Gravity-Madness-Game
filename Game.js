@@ -101,7 +101,7 @@ Game.prototype.checkCollisions = function() {
         if (rightLeft1 && leftRight1 && bottomTop1 && topBottom1) {
           this.crosses.splice(index, 1);
           this.player.caughtApples ++;
-        if(this.player.caughtApples ===10) {
+        if(this.player.caughtApples ===5) {
              this.isGameOver = true;
       }
         }

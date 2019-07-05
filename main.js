@@ -90,8 +90,8 @@ function main (){
     function createGameOverScreen (){
         if (this.player.lives===0){
         var gameOverScreen = buildDom(`
-        <section id="intro-page">
-        <h1><span class="title-second">GAME</span> OVER</h1>
+        <section id="outro-page">
+        <h1><span class="title-three">GAME</span>OVER</h1>
         <button>Play Again</button>
         </section>
         `);
@@ -101,8 +101,8 @@ function main (){
         }
         else {
             var gameOverWinScreen = buildDom(`
-            <section id="intro-page">
-            <h1><span class="title-second">YOU</span> WIN</h1>
+            <section id="outro-page">
+            <h1><span class="title-four">YOU</span>WIN</h1>
             <button>Play Again</button>
             </section>
             `);
