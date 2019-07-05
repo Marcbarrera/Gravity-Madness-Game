@@ -1,5 +1,6 @@
 * {
     margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
@@ -33,13 +34,10 @@ body {
 #intro-page h2 {
     color:white;
     font-size: 20px;
-    margin-bottom: 60px;
-    margin-top: 20px;
-
-
-    font-family: Arial, Helvetica, sans-serif;
-
-
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    /* font-family: 'Kaushan Script', cursive; */
+    opacity: 0.8;
 }
 
 
@@ -47,23 +45,31 @@ body {
     color:white;
     font-size: 80px;
     font-family: 'Press Start 2P', cursive;
+    opacity: 0.9;
 
 }
 
-.title-first{
+.title-first {
     color:red;
     margin-left:50px;
 }
 
-.title-second{
+.title-second {
 
 color:red;
 margin-left:20px;
+font-size: 80px;
+
 }
 
 #intro-page button{
-
+    border-style: none;
+    background-color: transparent;
     text-decoration: none;
+    color:yellow;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    margin-top:30px;
 }
 
 #canvas-container .legend{
@@ -73,11 +79,10 @@ margin-left:20px;
     align-items: center;
     flex-direction: row;
     background-color:rgb(78,154,6);
-    /* background-color: blue; */
     width: 100%;
     height: 10vh;
     color:orange;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Press Start 2P', cursive;
 
 }
 #gameOverPage{
@@ -95,22 +100,33 @@ margin-left:20px;
 
 
 .numApples-img img{
+    
     width: 60px;
+}
+.equal-img img{
+    margin-left: 10px;
+    width: 30px;
 }
 .numApples p{
     margin-left: 20px;
-    font-size: 40px;
-       
+    font-size: 40px; 
 }
 
 
 .numLives{
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: row;
-    justify-content: center; }
+    justify-content: center; 
+    align-items: center;
+ }
+ .numLives-img img{
+    width: 50px;
+}
 
 .numLives p{
+    margin-left: 20px;
+
     font-size: 40px;    
 }
 

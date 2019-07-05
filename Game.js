@@ -57,7 +57,7 @@ Game.prototype.update = function() {
       numeroApples.innerHTML=+this.player.caughtApples;
 
       var numeroDeVidas = document.querySelector('.numLives p');
-      numeroDeVidas.innerHTML="lives = "+this.player.lives;
+      numeroDeVidas.innerHTML=+this.player.lives;
   }
 
 Game.prototype.clear = function() {

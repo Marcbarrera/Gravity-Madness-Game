@@ -15,7 +15,6 @@ function main (){
         <section id="intro-page">
             <h2>WELCOME TO...</h2>
             <h1><span class="title-first">GRAVITY</span> MADNESS</h1>
-            <p>get 10 apples to discover gravity's formula</p>
             <button>START</button>
         </section>
         `);
@@ -31,13 +30,23 @@ function main (){
             <article class="legend">
                 <div class="numApples">
                     <div class="numApples-img">
-                        <img src="./apple.svg">
+                        <img src="./apple-pixel.png">
+                    </div>
+                    <div class="equal-img">
+                        <img src="./equal.png">
                     </div>
                     <p>
                     </p>
                 </div>
                 <div class="numLives">
-                    <p></p>
+                    <div class="numLives-img">
+                        <img src="./newton-pixel.png">
+                    </div>
+                    <div class="equal-img">
+                        <img src="./equal.png">
+                    </div>
+                    <p>
+                    </p>
                 </div>
             </article>
             <canvas></canvas> 
@@ -92,8 +101,8 @@ function main (){
         }
         else {
             var gameOverWinScreen = buildDom(`
-            <section>
-            <h1>YOU WIN</h1>
+            <section id="intro-page">
+            <h1><span class="title-second">YOU</span> WIN</h1>
             <button>Play Again</button>
             </section>
             `);
