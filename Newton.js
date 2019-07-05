@@ -9,7 +9,7 @@ function Player(canvas) {
   this.x = (this.canvas.width / 2) - this.width / 2;
   this.y = canvas.height-100;
   this.lives = 3;
-  this.velocity = 3;
+  this.velocity = 5;
   this.direction = 0;
   this.color = 'blue';
 }
@@ -20,8 +20,8 @@ Player.prototype.move = function() {
         this.direction=0;
   
     }
-    else if (this.x+40>this.canvas.width ){
-        this.x=this.canvas.width-40;
+    else if (this.x+100>this.canvas.width ){
+        this.x=this.canvas.width-100;
         this.direction=0;
     }
     else{
