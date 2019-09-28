@@ -7,10 +7,7 @@ function Cross(canvas, randomX) {
   this.y = 0;
   this.velocity = 10;
   this.direction = 1;
-    this.color = 'red';
-//   this.image = new Image();
-//   this.image.src = 'https://www.clipartsfree.net/svg/8942-red-apple-download.svg';
-
+  this.color = 'red';
   this.width = 60;
   this.height = 60;
 }
@@ -20,9 +17,7 @@ Cross.prototype.move = function() {
 }
 
 Cross.prototype.draw = function() {
-//   this.ctx.fillStyle = this.image.src;
-
-    var cat = new Image();
-    cat.src = 'apple.svg';
+  var cat = new Image();
+  cat.src = './src/apple.png';
   this.ctx.drawImage(cat, this.x, this.y, this.width, this.height);
 }

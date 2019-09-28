@@ -25,19 +25,19 @@ function main (){
 				<article class="legend">
 					<div class="numApples">
 						<div class="numApples-img">
-							<img src="./apple-pixel.png">
+							<img src="./src/apple-pixel.png">
 						</div>
 						<div class="equal-img">
-							<img src="./equal.png">
+							<img src="./src/equal.png">
 						</div>
 						<p></p>
 					</div>
 					<div class="numLives">
 						<div class="numLives-img">
-							<img src="./newton-pixel.png">
+							<img src="./src/newton-pixel.png">
 						</div>
 					<div class="equal-img">
-						<img src="./equal.png">
+						<img src="./src/equal.png">
 					</div>
 					<p></p>
 					</div>

@@ -18,6 +18,6 @@ Enemy.prototype.move = function() {
 
 Enemy.prototype.draw = function() {
     var cruz = new Image();
-    cruz.src = 'cross1.png';
+    cruz.src = './src/cross1.png';
   this.ctx.drawImage(cruz, this.x, this.y, this.width, this.height);
 }
