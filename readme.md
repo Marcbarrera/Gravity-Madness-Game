@@ -6,7 +6,7 @@ Newton needs to be hit by the apple's falling off the tree. He also has to avoid
 
 ## MVP (DOM - CANVAS)
 MVP definition, deliverables.
-A demo of the game.
+A deployet demo: https://marcbarrera.github.io/Gravity-Madness-Game/
 
 ## Backlog
 - Add illustrations.
